@@ -1,0 +1,14 @@
+{
+  "name": "my-first-repo",
+  "version": "1.0.0",
+  "description": "Привет! Меня зовут [Адамонис Никита]. Я учусь пользоваться Git и GitHub. Я имею знания таких языков программирования, как Python, C++, C#, JS, Java. Почта: nikitaadamonis@gmail.com",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.9"
+  }
+}
