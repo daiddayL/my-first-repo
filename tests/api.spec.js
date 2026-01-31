@@ -18,7 +18,7 @@ test.beforeAll(async ({ request }) => {
     console.log('Auth token:', authToken);
 });
 
-test('Создание бронирования (Create - POST)', async ({ request }) => {
+test('Создание бронирования (Create - POST) @api', async ({ request }) => {
     const bookingData = {
         "firstname": "Nikita",
         "lastname": "Adamon",
@@ -49,7 +49,7 @@ test('Создание бронирования (Create - POST)', async ({ reque
     console.log('Id:', bookingId);
 });
 
-test('Получение информации о бронировании (Read - GET)', async ({ request }) => {
+test('Получение информации о бронировании (Read - GET) @api', async ({ request }) => {
     const response = await request.get(`${BASE_URL}/booking/${bookingId}`);
     console.log('GETstatus:', response.status());
 
@@ -62,7 +62,7 @@ test('Получение информации о бронировании (Read 
     expect(responseBody.totalprice).toBe(400);
 });
 
-test('Обновление бронирования (Update - PUT)', async ({ request }) => {
+test('Обновление бронирования (Update - PUT) @api', async ({ request }) => {
     const updateData = {
         "firstname": "Nikita",
         "lastname": "Adamonis",//changed this one
@@ -90,7 +90,7 @@ test('Обновление бронирования (Update - PUT)', async ({ re
     expect(responseBody.lastname).toBe('Adamonis');
 });
 
-test('Удаление бронирования (Delete - DELETE)', async ({ request }) => {
+test('Удаление бронирования (Delete - DELETE) @api', async ({ request }) => {
     
     const response = await request.delete(`${BASE_URL}/booking/${bookingId}`, {
         
@@ -104,7 +104,7 @@ test('Удаление бронирования (Delete - DELETE)', async ({ req
     expect(response.status()).toBe(201);
 });
 
-test('Попробуйте после удаления отправить GET запрос на тот же id', async ({ request }) => {
+test('Попробуйте после удаления отправить GET запрос на тот же id @api', async ({ request }) => {
     const response = await request.get(`${BASE_URL}/booking/${bookingId}`);
     console.log('GET deleted status:', response.status());
 

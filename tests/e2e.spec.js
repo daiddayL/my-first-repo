@@ -6,7 +6,7 @@ import { CheckoutStepOnePage } from '../pages/CheckoutStepOnePage.js';
 import { CheckoutStepTwoPage } from '../pages/CheckoutStepTwoPage.js';
 import { CheckoutCompletePage } from '../pages/CheckoutCompletePage.js';
 
-test('полноценный e2e тест', async ({page})=>{
+test('полноценный e2e тест @ui', async ({page})=>{
 const loginPage = new LoginPage(page);
 const inventoryPage = new InventoryPage(page);
 const cartPage = new CartPage(page);
